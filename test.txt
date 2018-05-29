@@ -1,0 +1,29 @@
+Install jenkins by docker:
+
+sudo apt-get -y install \
+  apt-transport-https \
+  ca-certificates \
+  curl
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+sudo add-apt-repository \
+       "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+       $(lsb_release -cs) \
+       stable"
+
+sudo apt-get update
+
+su
+
+docker run -i -t -p 8080:8080 --name=jenkins1 jenkins /bin/bash 
+
+cd jenkins /bin/bash 
+./jenkins.sh
+
+
+
+
+Connections Jenkins server:
+https://connjenk.swg.usma.ibm.com/jenkins/job/connections-incubator/job/file-services/ 
+
